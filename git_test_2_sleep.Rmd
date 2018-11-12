@@ -1,0 +1,28 @@
+---
+title: "git_Test_sleep_2"
+author: "Sam Smith"
+date: "November 12, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(tidyverse)
+
+sleep <- read_csv("sleep.csv")
+```
+
+```{r}
+
+sleep_scatter <- ggplot(sleep, aes(x= gestation, y= life_span)) +
+  geom_point()
+
+sleep_scatter
+
+
+```
+
